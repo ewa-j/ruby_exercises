@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+.form {
+  text-align: center;
+  padding-top: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-image: url("https://eskipaper.com/images/free-birthday-background-1.jpg");
+  background-size: cover;
+  background-color: rgb(32, 178, 170);
+}
+</style>
+</head>
+<body>
+  <% if @name == nil %>
+    <div class="form">
+      <h1>Hi there!</h1><br>
+      <form action="/birthday" method="post">
+        <h2>What's your name?</h2>
+        <label for="name">Enter your name</label><br>
+        <input type="text" name="name" id="name"><br><br>
+
+        <h2>When's your birthday?</h2>
+
+        <label for="day">day</label>
+        <input type="number" name="day" id="day" min="1" max="31"><br><br>
+
+        <label for="month">month</label>
+        <select name="month" id="month">
+          <option value="january">January</option>
+          <option value="february">February</option>
+          <option value="march">March</option>
+          <option value="april">April</option>
+          <option value="may">May</option>
+          <option value="june">June</option>
+          <option value="july">July</option>
+          <option value="august">August</option>
+          <option value="september">September</option>
+          <option value="october">October</option>
+          <option value="november">November</option>
+          <option value="december">December</option>
+        </select><br><br>
+        <input type="submit" value="Go!">
+      </form>
+    </div>
+  <% end %>
+</body>
+</html>
